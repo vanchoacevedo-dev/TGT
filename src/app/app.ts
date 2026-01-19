@@ -14,4 +14,11 @@ export class App {
 
   // TAB seleccionado en sidebar
   selectedMenu = signal<'quienes' | 'servicios' | 'vehiculos' | 'videos' | 'contactos'>('quienes');
+
+  open = false;
+
+  // Opcional: función para detectar si es móvil
+  isMobile(): boolean {
+    return window.innerWidth < 768; // md breakpoint tailwind
+  }
 }

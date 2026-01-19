@@ -1,12 +1,18 @@
 <div class="flex min-h-screen bg-linear-to-br from-black to-red-700  ">
-
+  <!-- BOTÓN HAMBURGER PARA MOVIL -->
+  <button class="md:hidden fixed top-4 left-4 z-50 text-white bg-black p-2 rounded" (click)="open = !open">
+    ☰
+  </button>
   <!-- SIDEBAR LATERAL -->
-  <aside class="w-64 md:w-75 h-screen md:h-screen bg-black border-r-2 md:border-r-10 flex flex-col p-2 fixed md:static top-0 left-0 z-50 md:z-auto">
-
+  <aside class="w-64 md:w-75 h-screen bg-black border-r-2 md:border-r-10 flex flex-col p-2 fixed md:static top-0 left-0 z-40
+             transform transition-transform duration-300
+             md:translate-x-0" [class.-translate-x-full]="!open && isMobile()">
 
     <!-- LOGO -->
 
-    <img src="assets/2.jpg" alt="Logo" class="w-full h-full  shadow mb-6 mx-auto">
+    <img src="assets/2.jpg" alt="Logo" class="w-full h-70 object-contain mx-auto mb-6 shadow">
+
+
 
     <!-- MENU DE TABS -->
     <nav class="flex flex-col gap-2">
