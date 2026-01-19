@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+@plugin "daisyui";
+
+.main-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-scroll::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.main-scroll::-webkit-scrollbar-thumb {
+  background: yellow;
+  border-radius: 10px;
+}
+
+.main-scroll::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
+
+.main-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: yellow #111; /* Firefox */
+}
